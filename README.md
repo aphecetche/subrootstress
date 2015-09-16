@@ -8,18 +8,18 @@ Requirements
 
 - root >= 5.34.30 < 6 (https://root.cern.ch/content/release-53432)
 
-- git (to retrieve rootstress source)
+- git (to retrieve subrootstress source)
 
 Installation
 
-git clone https://github.com/aphecetche/acode.git
-cd acode/rootstress
-make
+	git clone https://github.com/aphecetche/subrootstress.git
+	cd subrootstress
+	make
 
 Execution
 
-cd acode/rootstress
-./compute.sh
+	cd subrootstress
+	./compute.sh
 
 Report
 
