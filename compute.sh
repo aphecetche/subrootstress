@@ -51,4 +51,5 @@ do
 
 done
 
-root -b -q plot.C++\($nruns\)
+./rootstress_plot $nruns
+

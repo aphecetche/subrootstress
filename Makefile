@@ -11,13 +11,16 @@ LIBS += -L$(ALICE_ROOT)/lib
 
 LIBS += -lGui -lEG -lGeom -lVMC -lMinuit -lTree -lProof -lProofPlayer -lXMLParser -lSpectrum
 
-all: rootstress
+all: rootstress rootstress_plot
 
 EventDict.cxx: Event.h EventLinkDef.h
 	@echo "Generating dictionary $@..."
 	rootcint -f $@ -c $^
 
 rootstress: rootstress.o Event.o EventDict.o
+	$(CXX) -Wall $(CXXFLAGS) $^ $(LIBS) -o $@
+
+rootstress_plot: rootstress_plot.o
 	$(CXX) -Wall $(CXXFLAGS) $^ $(LIBS) -o $@
 
 %.o: %.cxx %.h
@@ -27,5 +30,5 @@ rootstress: rootstress.o Event.o EventDict.o
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o *.so *.d G__* rootstress *Dict*
+	rm -f *.o *.so *.d G__* rootstress rootstress_plot *Dict*
 
