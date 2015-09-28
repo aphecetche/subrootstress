@@ -17,6 +17,7 @@ void plot(int n=10)
 	for ( int i = 0; i < n; ++i )
 	{
 		gv[i] = new TGraph(Form("result.%d",i));
+		gv[i]->Sort();
 	}
 
 	TGraphErrors* g = new TGraphErrors(gv[0]->GetN());
