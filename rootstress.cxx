@@ -5972,6 +5972,8 @@ void stress5()
 
    Bprint(5,"Test graphics & Postscript");
 
+   gStyle->SetOptFit(0);
+
    TCanvas *c1 = new TCanvas("stress-canvas","stress canvas",800,600);
    gROOT->LoadClass("TPostScript","Postscript");
    TPostScript ps("stress.ps",112);
