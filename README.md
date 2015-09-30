@@ -27,4 +27,6 @@ Report
 
 Results are in the SubRootMarksVsNProc.pdf file
 
+The bench is a mix of CPU (including floating point operations) and I/O stress.
+Of interest in the output figure is the value of the y-axis for 1 core (the higher the better) and the amount of performance decrease when going to more cores.
 
